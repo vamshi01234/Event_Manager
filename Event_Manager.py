@@ -6,7 +6,8 @@ while True:
     print("1. Add Person")
     print("2. View People")
     print("3. Add Event")
-    print("4. Exit")
+    print("4. View Events")
+    print("5. Exit")
 
     choice = input("Choose an option: ")
 
@@ -62,7 +63,36 @@ while True:
 
         if not found:
             print("Person not found ❌")
+
     elif choice == "4":
+
+        name = input("Enter person's name: ")
+
+        found = False
+
+        for person in people:
+
+            if person["name"] == name:
+
+                found = True
+
+                if len(person["events"]) == 0:
+                    print("No events found.")
+
+                else:
+                    print("\nEvents:")
+
+                    for event in person["events"]:
+
+                        print(event["type"], "-", event["date"])
+
+            break
+
+        if not found:
+            print("Person not found ❌")
+
+
+    elif choice == "5":
         break
 
     else:
