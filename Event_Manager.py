@@ -8,12 +8,13 @@ while True:
     print("3. Add Event")
     print("4. View Events")
     print("5. Add Detail")
-    print("6. Exit")
+    print("6. View Detail")
+    print("7. Exit")
 
     choice = input("Choose an option: ")
 
     if choice == "1":
-
+#Add Person
         name = input("Enter person's name: ")
 
         person = {
@@ -29,7 +30,7 @@ while True:
         print("Person added!")
 
     elif choice == "2":
-
+#View People
         if len(people) == 0:
             print("No people found.")
 
@@ -37,7 +38,7 @@ while True:
             print("\nName:", person["name"])
 
     elif choice == "3":
-
+#Add Event
         name = input("Enter person's name: ")
 
         found = False
@@ -68,7 +69,7 @@ while True:
             print("Person not found ❌")
 
     elif choice == "4":
-
+#View Events
         name = input("Enter person's name: ")
 
         found = False
@@ -96,7 +97,7 @@ while True:
 
 
     elif choice == "5":
-
+#Add Detail
         name = input("Enter person's name: ")
 
         found = False
@@ -119,8 +120,36 @@ while True:
         if not found:
             print("Person not found ❌")
 
-
     elif choice == "6":
+#View Detail
+    name = input("Enter person's name: ")
+
+        found = False
+
+        for person in people:
+
+            if person["name"] == name:
+
+                found = True
+
+                if len(person["details"]) == 0:
+                    print("No details found.")
+
+                else:
+
+                    print("\nDetails:")
+
+                    for detail_name, detail_value in person["details"].items():
+
+                        print(detail_name, ":", detail_value)
+    
+                break
+
+        if not found:
+            print("Person not found ❌")    
+
+
+    elif choice == "7":
         break
 
     else:
