@@ -1,3 +1,6 @@
+import json
+
+
 people = []
 
 while True:
@@ -150,7 +153,15 @@ while True:
 
 #Exit
     elif choice == "7":
+
+        with open("people.json", "w") as file:
+            
+            json.dump(people, file, indent=4)
+
+        print("Data saved!")
+
         break
+ 
 
     else:
         print("Invalid option.")

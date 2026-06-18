@@ -1,0 +1,48 @@
+[
+    {
+        "name": "mummy",
+        "events": [
+            {
+                "type": "birthday",
+                "date": "Dec 10th"
+            }
+        ],
+        "details": {
+            "Mothers Day Gift": "Air Fryer"
+        }
+    },
+    {
+        "name": "Daddy",
+        "events": [
+            {
+                "type": "Birthday",
+                "date": "Aug 18th"
+            }
+        ],
+        "details": {
+            "Fathers day Gift": "Samsung Galaxy Watch 8"
+        }
+    },
+    {
+        "name": "vamshi",
+        "events": [
+            {
+                "type": "birthday",
+                "date": "July 31st"
+            }
+        ],
+        "details": {}
+    },
+    {
+        "name": "chikky",
+        "events": [
+            {
+                "type": "birthday",
+                "date": "Sep 20th"
+            }
+        ],
+        "details": {
+            "Birthday Gift": "Smart Watch"
+        }
+    }
+]
