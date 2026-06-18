@@ -1,7 +1,13 @@
+
+
 import json
 
+try:
+    with open("people.json", "r") as file:
+        people = json.load(file)
+except FileNotFoundError:
+    people = []
 
-people = []
 
 while True:
 
