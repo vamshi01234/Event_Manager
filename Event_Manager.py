@@ -122,7 +122,7 @@ while True:
 
     elif choice == "6":
 #View Detail
-    name = input("Enter person's name: ")
+        name = input("Enter person's name: ")
 
         found = False
 
@@ -148,7 +148,7 @@ while True:
         if not found:
             print("Person not found ❌")    
 
-
+#Exit
     elif choice == "7":
         break
 
