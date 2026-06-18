@@ -7,7 +7,8 @@ while True:
     print("2. View People")
     print("3. Add Event")
     print("4. View Events")
-    print("5. Exit")
+    print("5. Add Detail")
+    print("6. Exit")
 
     choice = input("Choose an option: ")
 
@@ -18,7 +19,9 @@ while True:
         person = {
             "name": name,
             "events": [],
-            "details": {}
+            "details": {
+                    
+                }
         }
 
         people.append(person)
@@ -86,13 +89,38 @@ while True:
 
                         print(event["type"], "-", event["date"])
 
-            break
+                break
 
         if not found:
             print("Person not found ❌")
 
 
     elif choice == "5":
+
+        name = input("Enter person's name: ")
+
+        found = False
+
+        for person in people:
+
+            if person["name"] == name:
+
+                found = True
+
+                detail_name = input("Enter Detail Name (e.g., Shoe Size, Favorite Food): ")
+                detail_value = input("Enter Value (e.g., 10, Biryani): ")
+
+                person["details"][detail_name] = detail_value
+
+                print("Detail added!")
+
+                break
+
+        if not found:
+            print("Person not found ❌")
+
+
+    elif choice == "6":
         break
 
     else:
